@@ -7,7 +7,7 @@
 nmap <C-w>p     :vi! $HOME/projects/project/index.html<Cr>:vert h logs_training<Cr>:vnew<Cr>:e $HOME/projects/project<Cr>
 
 """ resize window
-nmap <C-w>2    :set <C-w>t24<C-w><bar>
+nmap <C-w>2    :set <C-w>t24<C-w><bar><Cr>
 nmap <C-w>3    :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar>
 nmap <C-w>4    :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>w60<C-w><bar><C-w>w
 
