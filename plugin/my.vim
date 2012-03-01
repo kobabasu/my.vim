@@ -4,7 +4,7 @@
 " License:	This file is placed in the public domain.
 
 """ open bookmark
-nmap m          :vi! $HOME/bm.txt
+nmap m          :to vsp $HOME/bm.txt<Cr>
 
 """ resize window
 nmap <C-w>2    <C-w>t24<C-w><bar><C-w>b
