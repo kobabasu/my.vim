@@ -3,8 +3,8 @@
 " Maintainer:	Keiji Kobayashi <keiji@seeknetusa.com>
 " License:	This file is placed in the public domain.
 
-""" open project
-nmap <C-w>p     :vi! $HOME/projects/project/index.html<Cr>:vert h logs_training<Cr>:vnew<Cr>:e $HOME/projects/project<Cr>
+""" open bookmark
+nmap m          :vi! $HOME/bm.txt
 
 """ resize window
 nmap <C-w>2    <C-w>t24<C-w><bar><C-w>b
