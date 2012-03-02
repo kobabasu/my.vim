@@ -11,27 +11,8 @@ nmap <C-w>2    <C-w>t24<C-w><bar><C-w>b
 nmap <C-w>3    :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>b
 nmap <C-w>4    :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>w60<C-w><bar><C-w>b
 
-""" AllMaps
-command!
-\   -nargs=* -complete=mapping
-\   AllMaps
-\   map <args> | map! <args> | lmap <args>
-
 """ reload .vimrc 
 nnoremap <Space>s.  :<C-u>source $HOME/.vimrc<Return>
-
-""" zencording
-let g:user_zen_settings = {
-      \ 'indentation' : '  ',
-      \ 'javascript'  : {
-      \ 'snippets'    : {
-      \ 'jq'          : "${function() {\n\t${cursor}${child}\n};",
-      \ 'jq:each'     : "$.each(${cursor}, function(index,item)\n\t${child}\n});",
-      \ 'fn'          : "(function() {\n\t${cursor}\n});",
-      \ 'tm'          : "setTimeout(function() {\n\t${cursor}\n}, 100);",
-      \ },
-      \ },
-      \ }
 
 """ preview browser
 if has('mac')
