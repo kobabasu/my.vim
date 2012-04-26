@@ -7,7 +7,8 @@
 nmap <C-w>m          :to vsp $HOME/bm.txt<Cr>
 
 """ resize window
-nmap <C-w>0    :set co=60<Cr>:winpos 1060 40<Cr>
+nmap <C-w>?    <C-h>logs<Cr><C-w>x:set co=80<Cr><C-w>h80<C-w>|
+nmap <C-w>0    :set co=60<Cr>:winpos 1100 40<Cr>
 nmap <C-w>2    <C-w>t24<C-w><bar><C-w>b
 nmap <C-w>3    :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>b
 nmap <C-w>4    :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>w60<C-w><bar><C-w>b
