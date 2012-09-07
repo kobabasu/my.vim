@@ -3,18 +3,26 @@
 " Maintainer:	Keiji Kobayashi <keiji@seeknetusa.com>
 " License:	This file is placed in the public domain.
 
-""" open bookmark
-nmap <C-w>m          :to vsp $HOME/bm.txt<Cr>
+""" AllMaps
+command!
+\   -nargs=* -complete=mapping
+\   AllMaps
+\   map <args> | map! <args> | lmap <args>
+
+""" vertical help
+noremap <C-h> :vert bel h 
+
+""" esc nohl
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+""" insert blank line
+nnoremap _ :<C-u>call append(expand('.'), '')<Cr>j
 
 """ resize window
-nmap <C-w>?    <C-h>logs<Cr><C-w>x:set co=80<Cr><C-w>h80<C-w>|
-nmap <C-w>0    :set co=60<Cr>:winpos 1100 40<Cr>
-nmap <C-w>2    <C-w>t24<C-w><bar><C-w>b
-nmap <C-w>3    :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>b
-nmap <C-w>4    :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>w60<C-w><bar><C-w>b
-
-""" reload .vimrc 
-nnoremap <Space>s.  :<C-u>source $HOME/.vimrc<Return>
+nmap <C-w>0 :set co=60<Cr>:winpos 1100 40<Cr>
+nmap <C-w>2 <C-w>t24<C-w><bar><C-w>b
+nmap <C-w>3 :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>b
+nmap <C-w>4 :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>w60<C-w><bar><C-w>b
 
 """ preview browser
 if has('mac')
@@ -32,7 +40,6 @@ else
 endif
 
 """ commentout.vim
-" lhs comments
 vmap ,# :s/^/#/<CR>:nohlsearch<CR>
 vmap ,/ :s/^/\/\//<CR>:nohlsearch<CR>
 vmap ,> :s/^/> /<CR>:nohlsearch<CR>
