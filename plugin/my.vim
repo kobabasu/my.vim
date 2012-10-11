@@ -3,6 +3,40 @@
 " Maintainer:	Keiji Kobayashi <keiji@seeknetusa.com>
 " License:	This file is placed in the public domain.
 
+""" tabline
+function! MyTabLabel(n)
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+  let buflen = tabpagewinnr(a:n, '$')
+  let bufname = fnamemodify(bufname(buflist[winnr - 1]), ':t')
+  let modi = len(filter(copy(buflist), 'getbufvar(v:val, "&modified")')) ? ' +' : ''
+  let label = ' ' . a:n . ': '
+  let label .= bufname == '' ? 'new' : bufname
+  let label .= modi . ''
+  let label .= ' ' . buflen . ' '
+
+  return label
+endfunction
+
+function! MyTabLine()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    if i + 1 == tabpagenr()
+      let s .= '%#TabLineSel#'
+    else
+      let s .= '%#TabLine#'
+    endif
+    let s .= '%' . (i + 1) . 'T'
+    let s .= ' %{MyTabLabel(' . (i + 1) . ')} '
+  endfor
+  let s .= '%#TabLineFill#%T'
+  if tabpagenr('$') > 1
+    let s .= '%=%#TabLine#%999Xx'
+  endif
+  return s
+endfunction
+set tabline=%!MyTabLine()
+
 """ AllMaps
 command!
 \   -nargs=* -complete=mapping
