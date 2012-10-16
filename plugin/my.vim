@@ -94,3 +94,6 @@ vmap ,h v`<I<CR><esc>k0i<!--<ESC>`>j0i--><CR><esc><ESC>
 
 " coffeescript
 nmap <C-c> :w<CR>:! coffee %<CR>
+
+" today
+let $today = strftime('%Y%m%d')
