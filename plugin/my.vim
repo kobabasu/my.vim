@@ -51,15 +51,10 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap _ :<C-u>call append(expand('.'), '')<Cr>j
 
 """ resize window
+nmap <C-w>0 :set co=60<Cr>:winpos 1100 40<Cr>
 nmap <C-w>2 <C-w>t24<C-w><bar><C-w>b
-if &fullscreen == 0
-    nmap <C-w>0 :set co=60<Cr>:winpos 1100 40<Cr>
-    nmap <C-w>3 :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>b
-    nmap <C-w>4 :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>w60<C-w><bar><C-w>b
-else
-    nmap <C-w>3 :<C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>b
-    nmap <C-w>4 :<C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>w60<C-w><bar><C-w>b
-endif
+nmap <C-w>3 :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>b
+nmap <C-w>4 :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>w60<C-w><bar><C-w>b
 
 """ preview browser
 if has('mac')
