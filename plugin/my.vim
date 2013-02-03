@@ -55,6 +55,7 @@ nmap <C-w>0 :set co=64<Cr>:winpos 1100 40<Cr>
 nmap <C-w>2 <C-w>t24<C-w><bar><C-w>b
 nmap <C-w>3 :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>b
 nmap <C-w>4 :set co=240<Cr><C-w>t24<C-w><bar><C-w>w60<C-w><bar><C-w>w60<C-w><bar><C-w>b
+nmap <C-w>5 :set co=240<Cr>24<C-w><bar><C-w>l50<C-w><bar><C-w>l50<C-w><bar><C-w>l60<C-w><bar><C-w>l<C-w>t
 
 """ preview browser
 if has('mac')
