@@ -99,3 +99,6 @@ nmap <C-c> :w<CR>:! coffee %<CR>
 " today
 let $today = strftime('%Y%m%d')
 let $todaytime = strftime('%Y%m%d.%H%M%S')
+
+" jekyll
+let $jekyll = strftime('%Y-%m-%d-')
