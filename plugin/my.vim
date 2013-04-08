@@ -42,7 +42,7 @@ command!
 \   map <args> | map! <args> | lmap <args>
 
 """ vertical help
-noremap <C-h> :vert bel h 
+noremap <C-h> :vert bel h log_
 
 """ esc nohl
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
