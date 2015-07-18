@@ -104,4 +104,4 @@ let $todaytime = strftime('%Y%m%d.%H%M%S')
 let $jekyll = strftime('%Y-%m-%d')
 
 " for srt (caption) format
-command MyVimSrt :%s;\(\d\{2}\)\(,\d\{3}\);\=printf("%02d%s", submatch(1) - 1, submatch(2));g<cr>
+command MyVimSrt :%s/\(\d\{2}\)\(,\d\{3}\)/\=printf("%02d%s", submatch(1) - 1, submatch(2))/g<CR>
